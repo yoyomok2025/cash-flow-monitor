@@ -1,0 +1,101 @@
+{
+    // ===== 核心引擎配置 (验证源: [1][2][3]) =====
+    "python.analysis.typeCheckingMode": "standard", // PEP 484合规类型检查基础模式
+    "python.analysis.autoSearchPaths": true, // 自动索引第三方包 (v2023.10.100新增)
+    "python.analysis.useLibraryCodeForTypes": true, // 改进类型推断
+
+    // ===== 代码格式化 (验证源: [4][5]) =====
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.black-formatter", // 官方推荐black
+    "black-formatter.args": [
+        "--line-length=100" // PEP 8建议值 | 验证: PEP 8 §Indentation
+    ],
+
+    // ===== 终端与环境 (验证源: [8]) =====
+    "python.terminal.activateEnvironment": true, // 自动激活venv
+
+    // ===== 编辑器增强 (验证源: [9]) =====
+    "editor.codeActionsOnSave": [
+        "source.organizeImports" // 自动导入排序
+    ],
+    "python.analysis.autoImportCompletions": true, // 智能导入补全
+
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "'Fira Code', 'Operator Mono', Consolas, monospace",
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.guides.bracketPairs": "active",  // 替代旧版renderWhitespace
+    "editor.suggestSelection": "first",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 25,
+
+    "terminal.integrated.gpuAcceleration": "auto",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.localEchoEnabled": "on",
+    "terminal.integrated.localEchoLatencyThreshold": 30,
+    "terminal.integrated.profiles.linux": {
+        "zsh": {
+        "path": "/usr/bin/zsh",
+        "args": ["--login", "-i"],
+        "overrideAnimations": "api"
+        }
+    },
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "terminal.integrated.scrollback": 10000,
+    "terminal.integrated.minimumContrastRatio": 4.5,
+
+    "workbench.editor.showTabs": "multiple",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "breadcrumbs.enabled": true,
+    "window.zoomLevel": 0.2,
+
+    "scm.defaultViewMode": "tree",
+    "diffEditor.renderSideBySide": true,
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.inlayHints.enabled": "on",
+    "remote.downloadExtensionsLocally": true,
+    
+    "cSpell.words": [
+        "arrowkeys",
+        "borderwidth",
+        "columnspan",
+        "customtkinter",
+        "evtlog",
+        "evtlogutil",
+        "evtx",
+        "fieldbackground",
+        "iids",
+        "insys",
+        "maxdate",
+        "mindate",
+        "MSMQ",
+        "nocase",
+        "ntlm",
+        "offvalue",
+        "onedir",
+        "onvalue",
+        "padx",
+        "pady",
+        "pyinstaller",
+        "pywintypes",
+        "rowspan",
+        "selectmode",
+        "stopindex",
+        "Tabview",
+        "tkcalendar",
+        "tksheet",
+        "Uncategorized",
+        "venv",
+        "winevt",
+        "wraplength",
+        "yscrollcommand"
+    ]
+}
